@@ -1,6 +1,9 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import java.util.Arrays;
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -107,7 +110,7 @@ public class Main {
 
          */
 
-       // null 은 객체를 가르키지 않는 상태이고, 빈 문자열은 길이가 0인 String 객체이다.
+        // null 은 객체를 가르키지 않는 상태이고, 빈 문자열은 길이가 0인 String 객체이다.
 
         /*
         String role = "Java Backend";
@@ -442,6 +445,7 @@ public class Main {
 
          */
 
+        /*
         int completedCount = 0;
         int cancelledCount = 0;
         int salesTotal = 0;
@@ -469,6 +473,185 @@ public class Main {
         System.out.println("취소 주문: " + cancelledCount + "건");
         System.out.println("매출 합계: " + salesTotal + "원");
         scanner.close();
+
+         */
+
+
+        /*
+        int[] scores = {70, 80};
+        int[] copied = scores;
+        copied[0] = 100;
+        System.out.println(scores[0]);
+        // 100
+
+         */
+
+        /*
+        int[] original = {80, 90, 100};
+        int[] alias = original;
+        alias[1] = 50;
+        System.out.println(original[1]);
+        System.out.println(original ==
+                alias);
+        // 출력: 50
+        // 출력: true
+
+         */
+
+        /*
+        int[] numbers1 = {10, 20, 30};
+        int[] numbers2 = {10, 20, 30};
+        int[] numbers3 = numbers1;
+        System.out.println(numbers1 ==
+                numbers2);
+        System.out.println(numbers1 ==
+                numbers3);
+        System.out.println(
+                Arrays.equals(numbers1,
+                        numbers2)
+        );
+
+         */
+
+        /*
+        String[] names = new String[3];
+        System.out.println(names.length);
+        System.out.println(names[0]);
+        // 출력: 3
+        // 출력: null
+        // names[0].length();
+        // NPE 발생
+         */
+
+        /*
+        String order = "COFFEE,2,HOT";
+        String[] parts = order.split(",");
+        if (parts.length == 3) {
+            System.out.println("상품: " + parts[0]);
+            System.out.println("수량: " + parts[1]);
+            System.out.println("옵션: " + parts[2]);
+        }
+
+         */
+
+        /*
+        String[] scores;
+        scores = new String[5];
+        scores[0] = "95";
+        scores[1] = "88";
+        System.out.println(scores[3]);
+
+         */
+
+        /*
+        int[] scores = {95, 88, 72, 64, 100};
+        int[] backup;
+
+        backup = new int[] {95, 88, 72};
+
+        // 아래 문장은 컴파일 오류
+        backup = {95, 88, 72};
+
+         */
+
+
+        /*
+        int[] numbers = {10, 20, 30};
+        System.out.println(numbers[0]);
+        System.out.println(numbers[2]);
+        System.out.println(numbers[3]);
+        // ArrayIndexOutOfBoundsException -> 인덱스 범위 밖 에러
+
+         */
+
+        /*
+        int[] scores = new int[5];
+        for (int index = 0; index < scores.length; index++) {
+            System.out.print((index + 1) + "번 점수: ");
+            scores[index] = scanner.nextInt();
+        }
+
+         */
+
+        /*
+        int total = 0;
+        int scores[] = new int[5];
+
+        for (int idx = 0; idx < scores.length; idx++) {
+            total += scores[idx];
+        }
+
+        double average = (double) total / scores.length;
+
+         */
+
+
+        /*
+        int[][] dailySales =
+                {
+                        {12000, 18000, 9000},
+                        {21000, 15000},
+                        {8000, 11000, 17000, 13000}
+                };
+        System.out.println(dailySales[1].length);
+        // 출력: 2
+
+        for (int row = 0; row < dailySales.length; row++) {
+            for (int column = 0; column < dailySales[row].length; column++) {
+                System.out.println(dailySales[row][column]);
+            }
+        }
+
+         */
+
+        
+        /*
+        int grandTotal = 0;
+        int[][] sales = new int[0][];
+        
+        for (int day = 0; day < sales.length; day++) {
+            int dayTotal = 0;
+            for (int amount : sales[day])
+            {
+                dayTotal += amount;
+                System.out.println(dayTotal);
+            }
+            grandTotal += dayTotal;
+            System.out.println(grandTotal);
+        }
+
+         */
+
+
+        /*
+        int[] original = {10, 20, 30};
+        int[] longer = Arrays.copyOf(original, 5);
+        int[] shorter = Arrays.copyOf(original, 2);
+        for (int longs : longer) {
+            System.out.println("longer : " + longs);
+        }
+        for (int shorts : shorter) {
+            System.out.println("short: " + shorts);
+        }
+        // longer: [10, 20, 30, 0, 0]
+        // shorter: [10, 20]
+
+         */
+
+
+        /*
+        for (int score : scores) {
+            score = 0;
+        }
+        System.out.println(
+                Arrays.toString(scores)
+        );
+        // [81, 94, 76, 88]
+        // 배열은 바뀌지 않는다.
+
+         */
+
+
 
 
     }
